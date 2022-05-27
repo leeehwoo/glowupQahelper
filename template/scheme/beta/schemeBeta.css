@@ -1,0 +1,369 @@
+.copyStyle {
+  color: black;
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: copy;
+}
+
+.copyStyle:hover {
+  color: rgb(194, 192, 192);
+}
+
+.qrcodeStyle, .resetStyle, .qrDownloadStyle {
+  color: black;
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.qrcodeStyle:hover, .resetStyle:hover, .qrDownloadStyle:hover {
+  color: rgb(194, 192, 192);
+}
+
+#titleArea {
+  background-color: rgb(141,243,219);
+  width: 700px;
+}
+
+#mainTitleArea {
+  font-size: 30px;
+  margin: 20px;
+  display: flex;
+}
+
+#mainOptionArea {
+  display: flex;
+  /*background-color: rgb(213,131,236);*/
+}
+
+#galleryPopupBtn, #editorBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+#galleryPopupBtn:hover, #editorBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#subOptionArea {
+  display: flex;
+  /*background-color: rgb(213,131,236);*/
+}
+
+#subOptionAreaFirst, #subOptionAreaSecond, #subOptionAreaThird{
+  display: flex;
+}
+
+#subRetouchBtn, #subReshapeBtn, #subMakeupBtn,#subEditBtn, #subCropBtn, #subPatchBtn, #subPaintBtn
+, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#subRetouchBtn:hover, #subReshapeBtn:hover, #subMakeupBtn:hover, #subEditBtn:hover, #subCropBtn:hover, #subPatchBtn:hover, #subPaintBtn:hover
+,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#retouchMainBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#retouchMainBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#blemishBtn, #whitenBtn, #smoothBtn, #smootherBtn, #skinTextureBtn, #detailsBtn, #clarityBtn, #glowBtn, #concealBtn, #matteBtn, #vibranceBtn, #manageBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#blemishBtn:hover, #whitenBtn:hover, #smoothBtn:hover, #smootherBtn:hover, #skinTextureBtn:hover, #detailsBtn:hover, #clarityBtn:hover, #glowBtn:hover, #concealBtn:hover, #matteBtn:hover, #vibranceBtn:hover, #manageBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#reshapeMainBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+#reshapeMainBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#reshapeBtn, #restoreBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+#reshapeBtn:hover, #restoreBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#moveHome, #moveSchemeHome {
+  margin-top: 7px;
+  margin-left: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#moveHome:hover, #moveSchemeHome:hover {
+  color: rgb(194, 192, 192);
+}
+
+#showQrCode {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 700px;
+}
+
+#showQrCodeDiv, #qrUl {
+  margin: 20px;
+}
+
+#paintMainBtn, #tintBtn, #toneBtn, #glitterBtn, #pickerBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#paintMainBtn:hover, #tintBtn:hover, #toneBtn:hover, #glitterBtn:hover, #pickerBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#touchUpMainBtn, #clarityBtn, #eyebagBtn, #wrinkleBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#touchUpMainBtn:hover, #clarityBtn:hover, #eyebagBtn:hover, #wrinkleBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#bodyMainBtn, #allBtn, #headBtn, #slimBtn, #lengthBtn, #legsBtn, #hipsBtn, #waiseBtn, #shouldersBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 68px;
+  height: 68px;
+  cursor: pointer;
+}
+
+#bodyMainBtn:hover, #allBtn:hover, #headBtn:hover, #slimBtn:hover, #lengthBtn:hover, #legsBtn:hover, #hipsBtn:hover, #waiseBtn:hover, #shouldersBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#relightMainBtn, #basicBtn, #centerBtn, #sideBtn, #sunsetBtn, #suncatcherBtn, #dualBtn, #linearBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#relightMainBtn:hover, #basicBtn:hover, #centerBtn:hover, #sideBtn:hover, #sunsetBtn:hover, #suncatcherBtn:hover, #dualBtn:hover, #linearBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#makeupMainBtn, #lipColorBtn, #blushBtn, #contourBtn, #eyelashesBtn, #eyebrowsBtn, #eyeLinerBtn, #eyeShadowBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#makeupMainBtn:hover, #lipColorBtn:hover, #blushBtn:hover, #contourBtn:hover, #eyelashesBtn:hover, #eyebrowsBtn:hover, #eyeLinerBtn:hover, #eyeShadowBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#faceMainBtn, #faceHeadBtn, #faceSlimBtn, #faceShortBtn, #faceLiftBtn, #faceCheekboneBtn, #faceTempleBtn, #faceJawboneBtn, #faceChinBtn, #faceVshapeBtn, #faceBrowBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#faceMainBtn:hover, #faceHeadBtn:hover, #faceSlimBtn:hover, #faceShortBtn:hover, #faceLiftBtn:hover, #faceCheekboneBtn:hover, #faceTempleBtn:hover, #faceJawboneBtn:hover, #faceChinBtn:hover, #faceVshapeBtn:hover, #faceBrowBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#eyesEnlargeBtn, #eyesPositionBtn, #eyesEyesizeBtn, #eyesEyewidthBtn, #eyesSpanBtn, #eyesCornerBtn, #eyesPupilBtn, #eyesInnerBtn, #eyesEyelengthBtn, #eyesUnderBtn, #eyesEyetailBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#eyesEnlargeBtn:hover, #eyesPositionBtn:hover, #eyesEyesizeBtn:hover, #eyesEyewidthBtn:hover, #eyesSpanBtn:hover, #eyesCornerBtn:hover, #eyesPupilBtn:hover, #eyesInnerBtn:hover, #eyesEyelengthBtn:hover, #eyesUnderBtn:hover, #eyesEyetailBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#eyebrowsThickBtn, #eyebrowsEyebrowliftBtn, #eyebrowsGlabellaBtn, #eyebrowsEyebrowBtn, #eyebrowsShapeBtn, #eyebrowsFrontBtn, #eyebrowsBehindBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#eyebrowsThickBtn:hover, #eyebrowsEyebrowliftBtn:hover, #eyebrowsGlabellaBtn:hover, #eyebrowsEyebrowBtn:hover, #eyebrowsShapeBtn:hover, #eyebrowsFrontBtn:hover, #eyebrowsBehindBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#noseNoseBtn, #noseNarrowBtn, #noseAlarBtn, #noseNoselengthBtn, #noseBridgeBtn, #noseRadixnasiBtn, #noseTipBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#noseNoseBtn:hover, #noseNarrowBtn:hover, #noseAlarBtn:hover, #noseNoselengthBtn:hover, #noseBridgeBtn:hover, #noseRadixnasiBtn:hover, #noseTipBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#mouthMouthBtn, #mouthPhiltrumBtn, #mouthLipwidthBtn, #mouthUpperlipBtn, #mouthLowerlipBtn, #mouthMlipBtn, #mouthSmileBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#mouthMouthBtn:hover, #mouthPhiltrumBtn:hover, #mouthLipwidthBtn:hover, #mouthUpperlipBtn:hover, #mouthLowerlipBtn:hover, #mouthMlipBtn:hover, #mouthSmileBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#eyesMainBtn, #eyesDetailBtn, #eyesLensBtn, #eyesWhitenBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#eyesMainBtn:hover, #eyesDetailBtn:hover, #eyesLensBtn:hover, #eyesWhitenBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#hairMainBtn, #hairFixBtn, #hairRecolorBtn, #hairTextureBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#hairMainBtn:hover, #hairFixBtn:hover, #hairRecolorBtn:hover, #hairTextureBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#lensInsertIdTitleArea, #recolorIdTitleArea {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#lensIdInsertArea, #recolorIdInsertArea {
+  margin-left: 27px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+
+#makeupIdSet, #categoryIdSet, #filterIdSet, #lensContentsIdSet, #recolorContentsIdSet, #relightContentsIdSet {
+  color: green;
+  font-size: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#makeupIdSet:hover, #categoryIdSet:hover, #filterIdSet:hover, #lensContentsIdSet:hover, #recolorContentsIdSet:hover, #relightContentsIdSet:hover {
+  color: rgb(140, 179, 149);
+}
+
+#makeupIdUnset, #categoryIdUnset, #filterIdUnset, #lensContentsIdUnset, #recolorContentsIdUnset, #relightContentsIdUnset {
+  color: red;
+  font-size: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#makeupIdUnset:hover, #categoryIdUnset:hover, #filterIdUnsets:hover, #lensContentsIdUnset:hover, #recolorContentsIdUnset:hover, #relightContentsIdUnset:hover {
+  color: rgb(236, 157, 157);
+}
+
+#faceDetail, #eyesDetail, #eyebrowsDetail, #noseDetail, #mouthDetail {
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: large;
+  font-weight: bold;
+}

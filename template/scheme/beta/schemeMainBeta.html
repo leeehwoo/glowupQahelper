@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="UTF-8">
+  <title>Scheme Main</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="../jquery.qrcode.js"></script>
+  <script type="text/javascript" src="../qrcode.js"></script>
+  <link rel="stylesheet" href="schemeBeta.css">
+  <script src="https://kit.fontawesome.com/3d6daedbc5.js" crossorigin="anonymous"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div id="mainTitleArea">
+    Scheme Main (Beta)
+    <i class="fas fa-home" id="moveHome" onclick="location.href='../../mainpage.html'"></i>
+  </div>
+  <div id="schemeSelectArea">
+    <div id="mainArea">
+      <div id="titleArea">
+        <h3>Main Scheme</h3>
+      </div>
+      <div id="mainOptionArea">
+        <div>
+          <button id="galleryPopupBtn">Gallery Popup</button>
+        </div>
+        <div>
+          <button id="editorBtn">Editor</button>
+        </div>
+      </div>
+    </div>
+    <div id="subArea">
+      <div id="titleArea">
+        <h3>Sub Scheme</h3>
+      </div>
+      <div id="subOptionAreaFirst">
+        <div>
+          <button id="subRetouchBtn" onclick="location.href='schemeRetouchBeta.html'">Retouch</button>
+        </div>
+        <div>
+          <button id="subReshapeBtn">Reshape</button>
+        </div>
+        <div>
+          <button id="subMakeupBtn" onclick="location.href='schemeMakeupBeta.html'">Makeup</button>
+        </div>
+        <div>
+          <button id="subEditBtn">Edit</button>
+        </div>
+        <div>
+          <button id="subCropBtn">Crop</button>
+        </div>
+        <div>
+          <button id="subPatchBtn">Patch</button>
+        </div>
+        <div>
+          <button id="subPaintBtn" onclick="location.href='schemePaintBeta.html'">Paint</button>
+        </div>
+      </div>
+      <div id="subOptionAreaSecond">
+        <div>
+          <button id="subFaceBtn" onclick="location.href='schemeFaceBeta.html'">Face</button>
+        </div>
+        <div>
+          <button id="subEyesBtn" onclick="location.href='schemeEyesBeta.html'">Eyes</button>
+        </div>
+        <div>
+          <button id="subTouchUpBtn" onclick="location.href='schemeTouchupBeta.html'">Touch up</button>
+        </div>
+        <div>
+          <button id="subFilterBtn" onclick="location.href='schemeFilterBeta.html'">Filter</button>
+        </div>
+        <div>
+          <button id="subBodyBtn" onclick="location.href='schemeBodyBeta.html'">Body</button>
+        </div>
+        <div>
+          <button id="subRelightBtn" onclick="location.href='schemeRelightBeta.html'">Relight</button>
+        </div>
+        <div>
+          <button id="subHairBtn" onclick="location.href='schemeHairBeta.html'">Hair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="titleArea">
+    <h2>* Scheme</h2>
+  </div>
+  <input id="mainUrl" readonly style="width: 600px;">
+  <br>
+  <br>
+  <i class="fas fa-copy copyStyle" id="schemeCopy"></i>
+  <br>
+  <div id="titleArea">
+    <h2>* QR Code</h2>
+  </div>
+  <i class="fas fa-qrcode qrcodeStyle" id="addQrcode" value="Show QR Code" onclick="actionAdd()"></i>
+  <i class="fas fa-redo-alt resetStyle" id="reset" value="Reset"></i>
+  <i class="fas fa-reqular fa-download qrDownloadStyle" id="downloadQrBtn" value="Download QR Code"></i>
+  <br>
+  <br>
+  <div id="qrCodeArea">
+    <div id="showQrCode">
+      <div id="showQrCodeDiv"></div>
+      <ul id="qrUl"></ul>
+    </div>
+  </div>
+
+  <script>
+    const schemeAppMain = {
+      mainSchemeUrl: '',
+      mainSchemeGalleryPopup: '',
+      mainSchemeEditor: '',
+      subSchemeReshape: '',
+      subSchemeEdit: '',
+      subSchemeCrop: '',
+      subSchemePatch: '',
+      mainAllUrl: '',
+    }
+
+    $(function () {
+
+      $("#galleryPopupBtn").click(function() {
+        schemeAppMain.mainSchemeUrl = "glowupb://album?type=photo";
+        mainSchemeSetUrl();
+      });
+
+      $("#editorBtn").click(function() {
+        schemeAppMain.mainSchemeUrl = "glowupb://go?menu=editor";
+        mainSchemeSetUrl();
+      });
+
+      $("#subReshapeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape";
+        mainSchemeSetUrl();
+      });
+
+      $("#subEditBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=edit";
+        mainSchemeSetUrl();
+      });
+
+      $("#subCropBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=crop";
+        mainSchemeSetUrl();
+      });
+
+      $("#subPatchBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=patch";
+        mainSchemeSetUrl();
+      });
+
+      $("#mainUrl").click(function() {
+        var schemeUrl = $(this).val();
+        window.open(schemeUrl);
+      });
+    })
+
+    function mainSchemeSetUrl() {
+      const mainParam = [
+        schemeAppMain.mainSchemeGalleryPopup,
+        schemeAppMain.mainSchemeGalleryPopup,
+        schemeAppMain.subSchemeEdit,
+        schemeAppMain.subSchemeCrop,
+        schemeAppMain.subSchemePatch
+      ]
+      console.log(mainParam);
+      var all = schemeAppMain.mainSchemeUrl;
+      $("#mainUrl").val(all);
+      schemeAppMain.mainAllUrl = all;
+    }
+
+    $("#addQrcode").click(function () {
+      $("#showQrCode #showQrCodeDiv").empty();
+      jQuery("#showQrCode #showQrCodeDiv").qrcode({
+        render: "table",
+        width: 100,
+        height: 100,
+        text: $("#mainUrl").val()
+      });
+    })
+
+    function actionAdd() {
+      $("#qrUl").empty();
+      var textAdd = $("#mainUrl").val();
+      var qrUl = $("#qrUl");
+      qrUl.append("<br>"+"<li>"+textAdd+"</li>");
+      var space = $("#showQrCodeDiv");
+      space.append("<br>");
+      window.scrollTo(0, document.body.scrollHeight)
+    }
+
+    $("#reset").click(function() {
+        $("#showQrCode #showQrCodeDiv").empty();
+        $("#qrUl").empty();
+    })
+
+    $("#schemeCopy").click (
+      function() {
+          var urlInfo = document.getElementById("mainUrl");
+          urlInfo.select();
+          document.execCommand("Copy");
+          alert("Add scheme to clipboard!")
+      }
+    )
+
+    $(function () {
+      $("#downloadQrBtn").on("click", function () {
+        html2canvas(document.querySelector("#showQrCode")).then(canvas => {
+          saveAs(canvas.toDataURL('image/png'),"qrcode.png");
+        });
+      });
+      function saveAs(uri, filename) {
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+          link.href = uri;
+          link.download = filename;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          window.open(uri);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

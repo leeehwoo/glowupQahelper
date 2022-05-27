@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="UTF-8">
+  <title>Body Scheme</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="../jquery.qrcode.js"></script>
+  <script type="text/javascript" src="../qrcode.js"></script>
+  <link rel="stylesheet" href="schemeBeta.css">
+  <script src="https://kit.fontawesome.com/3d6daedbc5.js" crossorigin="anonymous"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div id="mainTitleArea">
+    Body Scheme (Beta)
+    <i class="fas fa-arrow-left" id="moveSchemeHome" onclick="location.href='schemeMainBeta.html'"></i>
+    <i class="fas fa-home" id="moveHome" onclick="location.href='../../mainpage.html'"></i>
+  </div>
+  <div id="schemeSelectArea">
+    <div id="mainArea">
+      <div id="titleArea">
+        <h3>Main Scheme</h3>
+      </div>
+      <div id="mainOptionArea">
+        <div>
+          <button id="bodyMainBtn">Body</button>
+        </div>
+      </div>
+    </div>
+    <div id="subArea">
+      <div id="titleArea">
+        <h3>Sub Scheme</h3>
+      </div>
+      <div id="subOptionArea">
+        <div>
+          <button id="allBtn">All</button>
+        </div>
+        <div>
+          <button id="headBtn">Head</button>
+        </div>
+        <div>
+          <button id="slimBtn">Slim</button>
+        </div>
+        <div>
+          <button id="lengthBtn">Length</button>
+        </div>
+        <div>
+          <button id="legsBtn">Legs</button>
+        </div>
+        <div>
+          <button id="hipsBtn">Hips</button>
+        </div>
+        <div>
+          <button id="waiseBtn">Waise</button>
+        </div>
+        <div>
+          <button id="shouldersBtn">Shoulders</button>
+        </div>
+      </div>
+    </div>
+    <div id="titleArea">
+      <h2>* Scheme</h2>
+    </div>
+    <input id="mainUrl" readonly style="width: 600px;">
+    <br>
+    <br>
+    <i class="fas fa-copy copyStyle" id="schemeCopy"></i>
+    <br>
+    <div id="titleArea">
+      <h2>* QR Code</h2>
+    </div>
+    <i class="fas fa-qrcode qrcodeStyle" id="addQrcode" value="Show QR Code" onclick="actionAdd()"></i>
+    <i class="fas fa-redo-alt resetStyle" id="reset" value="Reset"></i>
+    <i class="fas fa-reqular fa-download qrDownloadStyle" id="downloadQrBtn" value="Download QR Code"></i>
+    <br>
+    <br>
+    <div id="qrCodeArea">
+      <div id="showQrCode">
+        <div id="showQrCodeDiv"></div>
+        <ul id="qrUl"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const schemeAppMain = {
+      mainSchemeUrl: '',
+      mainBody: '',
+      subAll: '',
+      subHead: '',
+      subSlim: '',
+      subLength: '',
+      subLegs: '',
+      subHips: '',
+      subWaise: '',
+      subShoulders: '',
+      mainAllUrl: '',
+    }
+
+    $(function () {
+
+      $("#bodyMainBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body";
+        mainSchemeSetUrl();
+      });
+
+      $("#allBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=all";
+        mainSchemeSetUrl();
+      });
+
+      $("#headBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=head";
+        mainSchemeSetUrl();
+      });
+
+      $("#slimBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=slim";
+        mainSchemeSetUrl();
+      });
+
+      $("#lengthBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=length";
+        mainSchemeSetUrl();
+      });
+
+      $("#legsBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=legs";
+        mainSchemeSetUrl();
+      });
+
+      $("#hipsBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=hips";
+        mainSchemeSetUrl();
+      });
+
+      $("#waiseBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=waise";
+        mainSchemeSetUrl();
+      });
+
+      $("#shouldersBtn").click(function() {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=body&subTab=shoulders";
+        mainSchemeSetUrl();
+      });
+
+      $("#mainUrl").click(function () {
+        var schemeUrl = $(this).val();
+        window.open(schemeUrl);
+      });
+    })
+
+    function mainSchemeSetUrl() {
+      const mainParam = [
+        schemeAppMain.mainBody,
+        schemeAppMain.subAll,
+        schemeAppMain.subHead,
+        schemeAppMain.subSlim,
+        schemeAppMain.subLength,
+        schemeAppMain.subLegs,
+        schemeAppMain.subWaise,
+        schemeAppMain.subShoulders
+      ]
+      var all = schemeAppMain.mainSchemeUrl;
+      $("#mainUrl").val(all);
+      schemeAppMain.mainAllUrl = all;
+    }
+
+    $("#addQrcode").click(function () {
+      $("#showQrCode #showQrCodeDiv").empty();
+      jQuery("#showQrCode #showQrCodeDiv").qrcode({
+        render: "table",
+        width: 100,
+        height: 100,
+        text: $("#mainUrl").val()
+      });
+    })
+
+    function actionAdd() {
+      $("#qrUl").empty();
+      var textAdd = $("#mainUrl").val();
+      var qrUl = $("#qrUl");
+      qrUl.append("<br>"+"<li>"+textAdd+"</li>");
+      var space = $("#showQrCodeDiv");
+      space.append("<br>");
+      window.scrollTo(0, document.body.scrollHeight)
+    }
+
+    $("#reset").click(function() {
+      $("#showQrCode #showQrCodeDiv").empty();
+      $("#qrUl").empty();
+    })
+
+    $("#schemeCopy").click (
+      function() {
+        var urlInfo = document.getElementById("mainUrl");
+        urlInfo.select();
+        document.execCommand("Copy");
+        alert("Add scheme to clipboard!")
+      }
+    )
+
+    $(function () {
+      $("#downloadQrBtn").on("click", function () {
+        html2canvas(document.querySelector("#showQrCode")).then(canvas => {
+          saveAs(canvas.toDataURL('image/png'),"qrcode.png");
+        });
+      });
+      function saveAs(uri, filename) {
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+          link.href = uri;
+          link.download = filename;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          window.open(uri);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

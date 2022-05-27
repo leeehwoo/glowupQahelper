@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="UTF-8">
+  <title>Face Scheme</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="../jquery.qrcode.js"></script>
+  <script type="text/javascript" src="../qrcode.js"></script>
+  <link rel="stylesheet" href="schemeBeta.css">
+  <script src="https://kit.fontawesome.com/3d6daedbc5.js" crossorigin="anonymous"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div id="mainTitleArea">
+    Face Scheme (Beta)
+    <i class="fas fa-arrow-left" id="moveSchemeHome" onclick="location.href='schemeMainBeta.html'"></i>
+    <i class="fas fa-home" id="moveHome" onclick="location.href='../../mainpage.html'"></i>
+  </div>
+  <div id="schemeSelectArea">
+    <div id="mainArea">
+      <div id="titleArea">
+        <h3>Main Scheme</h3>
+      </div>
+      <div id="mainOptionArea">
+        <div>
+          <button id="faceMainBtn">Face</button>
+        </div>
+      </div>
+    </div>
+    <div id="subArea">
+      <div id="titleArea">
+        <h3>Sub Scheme</h3>
+      </div>
+      <details>
+        <summary id="faceDetail">Face</summary>
+        <div id="subOptionAreaFirst">
+          <div>
+            <button id="faceHeadBtn">Head</button>
+          </div>
+          <div>
+            <button id="faceSlimBtn">Slim</button>
+          </div>
+          <div>
+            <button id="faceShortBtn">Short</button>
+          </div>
+          <div>
+            <button id="faceLiftBtn">Lift</button>
+          </div>
+          <div>
+            <button id="faceCheekboneBtn">Cheekbone</button>
+          </div>
+        </div>
+        <div id="subOptionAreaSecond">
+          <div>
+            <button id="faceTempleBtn">Temple</button>
+          </div>
+          <div>
+            <button id="faceJawboneBtn">Jawbone</button>
+          </div>
+          <div>
+            <button id="faceChinBtn">Chin</button>
+          </div>
+          <div>
+            <button id="faceVshapeBtn">Vshape</button>
+          </div>
+          <div>
+            <button id="faceBrowBtn">Brow</button>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary id="eyesDetail">Eyes</summary>
+        <div id="subOptionAreaFirst">
+          <div>
+            <button id="eyesEnlargeBtn">Enlarge</button>
+          </div>
+          <div>
+            <button id="eyesPositionBtn">Position</button>
+          </div>
+          <div>
+            <button id="eyesEyesizeBtn">Eyesize</button>
+          </div>
+          <div>
+            <button id="eyesEyewidthBtn">Eyewidth</button>
+          </div>
+          <div>
+            <button id="eyesSpanBtn">Span</button>
+          </div>
+          <div>
+            <button id="eyesCornerBtn">Corner</button>
+          </div>
+        </div>
+        <div id="subOptionAreaSecond">
+          <div>
+            <button id="eyesPupilBtn">Pupil</button>
+          </div>
+          <div>
+            <button id="eyesInnerBtn">Inner</button>
+          </div>
+          <div>
+            <button id="eyesEyelengthBtn">Eyelength</button>
+          </div>
+          <div>
+            <button id="eyesUnderBtn">Under</button>
+          </div>
+          <div>
+            <button id="eyesEyetailBtn">Eyetail</button>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary id="eyebrowsDetail">Eyebrows</summary>
+        <div id="subOptionArea">
+          <div>
+            <button id="eyebrowsThickBtn">Thick</button>
+          </div>
+          <div>
+            <button id="eyebrowsEyebrowliftBtn">Eyebrowlift</button>
+          </div>
+          <div>
+            <button id="eyebrowsGlabellaBtn">Glabella</button>
+          </div>
+          <div>
+            <button id="eyebrowsEyebrowBtn">Eyebrow</button>
+          </div>
+          <div>
+            <button id="eyebrowsShapeBtn">Shape</button>
+          </div>
+          <div>
+            <button id="eyebrowsFrontBtn">Front</button>
+          </div>
+          <div>
+            <button id="eyebrowsBehindBtn">Behind</button>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary id="noseDetail">Nose</summary>
+        <div id="subOptionArea">
+          <div>
+            <button id="noseNoseBtn">Nose</button>
+          </div>
+          <div>
+            <button id="noseNarrowBtn">Narrow</button>
+          </div>
+          <div>
+            <button id="noseAlarBtn">Alar</button>
+          </div>
+          <div>
+            <button id="noseNoselengthBtn">Noselength</button>
+          </div>
+          <div>
+            <button id="noseBridgeBtn">Bridge</button>
+          </div>
+          <div>
+            <button id="noseRadixnasiBtn">Radixnasi</button>
+          </div>
+          <div>
+            <button id="noseTipBtn">Tip</button>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary id="mouthDetail">Mouth</summary>
+        <div id="subOptionArea">
+          <div>
+            <button id="mouthMouthBtn">Mouth</button>
+          </div>
+          <div>
+            <button id="mouthPhiltrumBtn">Philtrum</button>
+          </div>
+          <div>
+            <button id="mouthLipwidthBtn">Lipwidth</button>
+          </div>
+          <div>
+            <button id="mouthUpperlipBtn">Upperlip</button>
+          </div>
+          <div>
+            <button id="mouthLowerlipBtn">Lowerlip</button>
+          </div>
+          <div>
+            <button id="mouthMlipBtn">Mlip</button>
+          </div>
+          <div>
+            <button id="mouthSmileBtn">Smlie</button>
+          </div>
+        </div>
+      </details>
+    </div>
+    <div id="titleArea">
+      <h2>* Scheme</h2>
+    </div>
+    <input id="mainUrl" readonly style="width: 600px;">
+    <br>
+    <br>
+    <i class="fas fa-copy copyStyle" id="schemeCopy"></i>
+    <br>
+    <div id="titleArea">
+      <h2>* QR Code</h2>
+    </div>
+    <i class="fas fa-qrcode qrcodeStyle" id="addQrcode" value="Show QR Code" onclick="actionAdd()"></i>
+    <i class="fas fa-redo-alt resetStyle" id="reset" value="Reset"></i>
+    <i class="fas fa-reqular fa-download qrDownloadStyle" id="downloadQrBtn" value="Download QR Code"></i>
+    <br>
+    <br>
+    <div id="qrCodeArea">
+      <div id="showQrCode">
+        <div id="showQrCodeDiv"></div>
+        <ul id="qrUl"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const schemeAppMain = {
+      mainSchemeUrl: '',
+      mainFace: '',
+      detailFace: '',
+      faceHead: '',
+      faceSlim: '',
+      faceShort: '',
+      faceLift: '',
+      faceCheekbone: '',
+      faceTemple: '',
+      faceJawbone: '',
+      faceChin: '',
+      faceVshape: '',
+      faceBrow: '',
+      detailEyes: '',
+      eyesEnlarge: '',
+      eyesPosition: '',
+      eyesEyesize: '',
+      eyesEyewidth: '',
+      eyesSpan: '',
+      eyesCorner: '',
+      eyesPupil: '',
+      eyesInner: '',
+      eyesEyelength: '',
+      eyesUnder: '',
+      eyesEyetail: '',
+      detailEyebrows: '',
+      eyebrowsThick: '',
+      eyebrowsEyebrowlift: '',
+      eyebrowsGlabella: '',
+      eyebrowsEyebrow: '',
+      eyebrowsShape: '',
+      eyebrowsFront: '',
+      eyebrowsBehind: '',
+      detailNose: '',
+      noseNose: '',
+      noseNarrow: '',
+      noseAlar: '',
+      noseNoselength: '',
+      noseBridge: '',
+      noseRadixnasi: '',
+      noseTip: '',
+      detailMouth: '',
+      mouthMouth: '',
+      mouthPhiltrum: '',
+      mouthLipwidth: '',
+      mouthUpperlip: '',
+      mouthLowerlip: '',
+      mouthMlip: '',
+      mouthSmile: '',
+    }
+
+    $(function () {
+
+      $("#faceMainBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceDetail").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceHeadBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=head";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceSlimBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=slim";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceShortBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=short";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceLiftBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=lift";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceCheekboneBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=cheekbone";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceTempleBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=temple";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceJawboneBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=jawbone";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceChinBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=chin";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceVshapeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=vshape";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceBrowBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=brow";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesDetail").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesEnlargeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=enlarge";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesPositionBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=position";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesEyesizeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=eyesize";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesEyewidthBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=eyewidth";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesSpanBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=span";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesCornerBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=corner";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesPupilBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=pupil";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesInnerBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=inner";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesEyelengthBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=eyelength";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesUnderBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=under";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyesEyetailBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyes&itemId=eyetail";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsDetail").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsThickBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=thick";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsEyebrowliftBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=eyebrowlift";
+        mainSchemeSetUrl();
+      });$("#addQrcode").click(function () {
+        $("#showQrCode #showQrCodeDiv").empty();
+        jQuery("#showQrCode #showQrCodeDiv").qrcode({
+          render: "table",
+          width: 100,
+          height: 100,
+          text: $("#mainUrl").val()
+        });
+      })
+
+      function actionAdd() {
+        $("#qrUl").empty();
+        var textAdd = $("#mainUrl").val();
+        var qrUl = $("#qrUl");
+        qrUl.append("<br>"+"<li>"+textAdd+"</li>");
+        var space = $("#showQrCodeDiv");
+        space.append("<br>");
+        window.scrollTo(0, document.body.scrollHeight)
+      }
+
+      $("#reset").click(function() {
+        $("#showQrCode #showQrCodeDiv").empty();
+        $("#qrUl").empty();
+      })
+
+      $("#schemeCopy").click (
+        function() {
+          var urlInfo = document.getElementById("mainUrl");
+          urlInfo.select();
+          document.execCommand("Copy");
+          alert("Add scheme to clipboard!")
+        }
+      )
+
+      $(function () {
+        $("#downloadQrBtn").on("click", function () {
+          html2canvas(document.querySelector("#showQrCode")).then(canvas => {
+            saveAs(canvas.toDataURL('image/png'),"qrcode.png");
+          });
+        });
+        function saveAs(uri, filename) {
+          var link = document.createElement('a');
+          if (typeof link.download === 'string') {
+            link.href = uri;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          } else {
+            window.open(uri);
+          }
+        }
+      });
+
+      $("#eyebrowsGlabellaBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=glabella";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsEyebrowBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=eyebrow";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsShapeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=shape";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsFrontBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=front";
+        mainSchemeSetUrl();
+      });
+
+      $("#eyebrowsBehindBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=behind";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseDetail").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseNoseBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=nose";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseNarrowBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=narrow";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseAlarBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=alar";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseNoselengthBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=noselength";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseBridgeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=bridge";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseRadixnasiBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=radixnasi";
+        mainSchemeSetUrl();
+      });
+
+      $("#noseTipBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=nose&itemId=tip";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthDetail").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthMouthBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=mouth";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthPhiltrumBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=philtrum";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthLipwidthBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=lipwidth";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthUpperlipBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=upperlip";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthLowerlipBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=lowerlip";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthMlipBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=mlip";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthSmileBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=mouth&itemId=smile";
+        mainSchemeSetUrl();
+      });
+
+      $("#mainUrl").click(function () {
+        var schemeUrl = $(this).val();
+        window.open(schemeUrl);
+      });
+    })
+
+    function mainSchemeSetUrl() {
+      const mainParam = [
+        schemeAppMain.mainFace,
+        schemeAppMain.detailFace,
+        schemeAppMain.detailEyes,
+        schemeAppMain.detailEyebrows,
+        schemeAppMain.detailNose,
+        schemeAppMain.detailMouth,
+        schemeAppMain.faceHead,
+        schemeAppMain.faceSlim,
+        schemeAppMain.faceShort,
+        schemeAppMain.faceLift,
+        schemeAppMain.faceCheekbone,
+        schemeAppMain.faceTemple,
+        schemeAppMain.faceJawbone,
+        schemeAppMain.faceChin,
+        schemeAppMain.faceVshape,
+        schemeAppMain.faceBrow,
+        schemeAppMain.eyesEnlarge,
+        schemeAppMain.eyesPosition,
+        schemeAppMain.eyesEyesize,
+        schemeAppMain.eyesEyewidth,
+        schemeAppMain.eyesSpan,
+        schemeAppMain.eyesCorner,
+        schemeAppMain.eyesPupil,
+        schemeAppMain.eyesInner,
+        schemeAppMain.eyesEyelength,
+        schemeAppMain.eyesUnder,
+        schemeAppMain.eyesEyetail,
+        schemeAppMain.eyebrowsThick,
+        schemeAppMain.eyebrowsEyebrowlift,
+        schemeAppMain.eyebrowsGlabella,
+        schemeAppMain.eyebrowsEyebrow,
+        schemeAppMain.eyebrowsShape,
+        schemeAppMain.eyebrowsFront,
+        schemeAppMain.eyebrowsBehind,
+        schemeAppMain.noseNose,
+        schemeAppMain.noseNarrow,
+        schemeAppMain.noseAlar,
+        schemeAppMain.noseNoselength,
+        schemeAppMain.noseBridge,
+        schemeAppMain.noseRadixnasi,
+        schemeAppMain.noseTip,
+        schemeAppMain.mouthMouth,
+        schemeAppMain.mouthPhiltrum,
+        schemeAppMain.mouthLipwidth,
+        schemeAppMain.mouthUpperlip,
+        schemeAppMain.mouthLowerlip,
+        schemeAppMain.mouthMlip,
+        schemeAppMain.mouthSmile,
+      ]
+      console.log(mainParam);
+      var all = schemeAppMain.mainSchemeUrl;
+      $("#mainUrl").val(all);
+      schemeAppMain.mainAllUrl = all;
+    }
+
+    $("#addQrcode").click(function () {
+      $("#showQrCode #showQrCodeDiv").empty();
+      jQuery("#showQrCode #showQrCodeDiv").qrcode({
+        render: "table",
+        width: 100,
+        height: 100,
+        text: $("#mainUrl").val()
+      });
+    })
+
+    function actionAdd() {
+      $("#qrUl").empty();
+      var textAdd = $("#mainUrl").val();
+      var qrUl = $("#qrUl");
+      qrUl.append("<br>"+"<li>"+textAdd+"</li>");
+      var space = $("#showQrCodeDiv");
+      space.append("<br>");
+      window.scrollTo(0, document.body.scrollHeight)
+    }
+
+    $("#reset").click(function() {
+      $("#showQrCode #showQrCodeDiv").empty();
+      $("#qrUl").empty();
+    })
+
+    $("#schemeCopy").click (
+      function() {
+        var urlInfo = document.getElementById("mainUrl");
+        urlInfo.select();
+        document.execCommand("Copy");
+        alert("Add scheme to clipboard!")
+      }
+    )
+
+    $(function () {
+      $("#downloadQrBtn").on("click", function () {
+        html2canvas(document.querySelector("#showQrCode")).then(canvas => {
+          saveAs(canvas.toDataURL('image/png'),"qrcode.png");
+        });
+      });
+      function saveAs(uri, filename) {
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+          link.href = uri;
+          link.download = filename;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          window.open(uri);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
