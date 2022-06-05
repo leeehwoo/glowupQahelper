@@ -72,12 +72,12 @@
         if (categoryId === '') {
           return false;
         }
-        schemeAppMain.category = 'category=' + categoryId;
+        schemeAppMain.category = 'categoryId=' + categoryId;
         mainSchemeSetUrl();
       });
 
       $("#categoryIdUnset").click(function () {
-        if(schemeAppMain.category.indexOf("category") !== -1) {
+        if(schemeAppMain.category.indexOf("categoryId") !== -1) {
           schemeAppMain.category = '';
           mainSchemeSetUrl();
         }
