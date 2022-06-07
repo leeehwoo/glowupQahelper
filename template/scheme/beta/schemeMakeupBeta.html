@@ -151,12 +151,12 @@
         if (makeupId === '') {
           return false;
         }
-        schemeAppMain.makeupContentsId = 'itemID=' + makeupId;
+        schemeAppMain.makeupContentsId = 'itemId=' + makeupId;
         mainSchemeSetUrl();
       });
 
       $("#makeupIdUnset").click(function () {
-        if (schemeAppMain.makeupContentsId.indexOf("itemID") !== -1) {
+        if (schemeAppMain.makeupContentsId.indexOf("itemId") !== -1) {
           schemeAppMain.makeupContentsId = '';
           mainSchemeSetUrl();
         }
