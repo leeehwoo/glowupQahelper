@@ -88,12 +88,12 @@
         if (filterId === '') {
           return false;
         }
-        schemeAppMain.filter = 'filterID=' + filterId;
+        schemeAppMain.filter = 'itemId=' + filterId;
         mainSchemeSetUrl();
       });
 
       $("#filterIdUnset").click(function () {
-        if (schemeAppMain.filter.indexOf("filterID") !== -1) {
+        if (schemeAppMain.filter.indexOf("itemId") !== -1) {
           schemeAppMain.filter = '';
           mainSchemeSetUrl();
         }
