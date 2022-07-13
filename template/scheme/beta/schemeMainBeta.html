@@ -59,10 +59,13 @@
           <button id="subPatchBtn">Patch</button>
         </div>
         <div>
-          <button id="subPaintBtn" onclick="location.href='schemePaintBeta.html'">Paint</button>
+          <button id="subVanishBtn">Vanish</button>
         </div>
       </div>
       <div id="subOptionAreaSecond">
+        <div>
+          <button id="subPaintBtn" onclick="location.href='schemePaintBeta.html'">Paint</button>
+        </div>
         <div>
           <button id="subFaceBtn" onclick="location.href='schemeFaceBeta.html'">Face</button>
         </div>
@@ -119,6 +122,7 @@
       subSchemeEdit: '',
       subSchemeCrop: '',
       subSchemePatch: '',
+      subSchemeVanish: '',
       mainAllUrl: '',
     }
 
@@ -154,6 +158,11 @@
         mainSchemeSetUrl();
       });
 
+      $("#subVanishBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=vanish";
+        mainSchemeSetUrl();
+      });
+
       $("#mainUrl").click(function() {
         var schemeUrl = $(this).val();
         window.open(schemeUrl);
@@ -166,7 +175,8 @@
         schemeAppMain.mainSchemeGalleryPopup,
         schemeAppMain.subSchemeEdit,
         schemeAppMain.subSchemeCrop,
-        schemeAppMain.subSchemePatch
+        schemeAppMain.subSchemePatch,
+        schemeAppMain.subSchemeVanish,
       ]
       console.log(mainParam);
       var all = schemeAppMain.mainSchemeUrl;
