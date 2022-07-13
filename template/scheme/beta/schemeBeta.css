@@ -60,18 +60,18 @@
 }
 
 #subRetouchBtn, #subReshapeBtn, #subMakeupBtn,#subEditBtn, #subCropBtn, #subPatchBtn, #subPaintBtn
-, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn {
+, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn, #subSkintoneBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
-  width: 70px;
-  height: 70px;
+  width: 68px;
+  height: 68px;
   cursor: pointer;
   text-align: center;
 }
 
 #subRetouchBtn:hover, #subReshapeBtn:hover, #subMakeupBtn:hover, #subEditBtn:hover, #subCropBtn:hover, #subPatchBtn:hover, #subPaintBtn:hover
-,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover {
+,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover, #subSkintoneBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
@@ -366,4 +366,18 @@
   margin-bottom: 20px;
   font-size: large;
   font-weight: bold;
+}
+
+#skintoneMainBtn, #fairBtn, #roseBtn, #ivoryBtn, #goldenBtn, #chestnutBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#skintoneMainBtn:hover, #fairBtn:hover, #roseBtn:hover, #ivoryBtn:hover, #goldenBtn:hover, #chestnutBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
 }
