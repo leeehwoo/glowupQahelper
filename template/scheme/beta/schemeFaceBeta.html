@@ -37,6 +37,9 @@
         <summary id="faceDetail">Face</summary>
         <div id="subOptionAreaFirst">
           <div>
+            <button id="faceShapeBtn">Shape</button>
+          </div>
+          <div>
             <button id="faceHeadBtn">Head</button>
           </div>
           <div>
@@ -218,6 +221,7 @@
       mainSchemeUrl: '',
       mainFace: '',
       detailFace: '',
+      faceShape: '',
       faceHead: '',
       faceSlim: '',
       faceShort: '',
@@ -275,6 +279,11 @@
 
       $("#faceDetail").click(function () {
         schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face";
+        mainSchemeSetUrl();
+      });
+
+      $("#faceShapeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=face&itemId=shape";
         mainSchemeSetUrl();
       });
 
@@ -574,6 +583,7 @@
         schemeAppMain.detailEyebrows,
         schemeAppMain.detailNose,
         schemeAppMain.detailMouth,
+        schemeAppMain.faceShape,
         schemeAppMain.faceHead,
         schemeAppMain.faceSlim,
         schemeAppMain.faceShort,

@@ -225,7 +225,7 @@
   color: white;
 }
 
-#faceMainBtn, #faceHeadBtn, #faceSlimBtn, #faceShortBtn, #faceLiftBtn, #faceCheekboneBtn, #faceTempleBtn, #faceJawboneBtn, #faceChinBtn, #faceVshapeBtn, #faceBrowBtn {
+#faceMainBtn, #faceShapeBtn, #faceHeadBtn, #faceSlimBtn, #faceShortBtn, #faceLiftBtn, #faceCheekboneBtn, #faceTempleBtn, #faceJawboneBtn, #faceChinBtn, #faceVshapeBtn, #faceBrowBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -234,7 +234,7 @@
   cursor: pointer;
 }
 
-#faceMainBtn:hover, #faceHeadBtn:hover, #faceSlimBtn:hover, #faceShortBtn:hover, #faceLiftBtn:hover, #faceCheekboneBtn:hover, #faceTempleBtn:hover, #faceJawboneBtn:hover, #faceChinBtn:hover, #faceVshapeBtn:hover, #faceBrowBtn:hover {
+#faceMainBtn:hover, #faceShapeBtn:hover, #faceHeadBtn:hover, #faceSlimBtn:hover, #faceShortBtn:hover, #faceLiftBtn:hover, #faceCheekboneBtn:hover, #faceTempleBtn:hover, #faceJawboneBtn:hover, #faceChinBtn:hover, #faceVshapeBtn:hover, #faceBrowBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
