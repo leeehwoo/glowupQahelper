@@ -70,7 +70,7 @@
     const schemeAppMain = {
       mainSchemeUrl: '',
       mainReshape: '',
-      mainSubReshap: '',
+      mainSubReshape: '',
       mainRestore: '',
       mainAllUrl: '',
     }
@@ -83,12 +83,12 @@
       });
 
       $("#reshapeBtn").click(function () {
-        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape&subTab=reshape";
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape&itemId=reshape";
         mainSchemeSetUrl();
       });
 
       $("#restoreBtn").click(function () {
-        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape&subTab=restore";
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape&itemId=restore";
         mainSchemeSetUrl();
       });
 
@@ -99,7 +99,7 @@
     })
 
     function mainSchemeSetUrl() {
-      const mainParam = [schemeAppMain.mainReshape, schemeAppMain.mainSubReshap, schemeAppMain.mainRestore]
+      const mainParam = [schemeAppMain.mainReshape, schemeAppMain.mainSubReshape, schemeAppMain.mainRestore]
       console.log(mainParam);
       var all = schemeAppMain.mainSchemeUrl;
       $("#mainUrl").val(all);

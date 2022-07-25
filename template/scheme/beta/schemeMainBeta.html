@@ -41,7 +41,7 @@
           <button id="subRetouchBtn" onclick="location.href='schemeRetouchBeta.html'">Retouch</button>
         </div>
         <div>
-          <button id="subReshapeBtn">Reshape</button>
+          <button id="subReshapeBtn" onclick="location.href='schemeReshapeBeta.html'">Reshape</button>
         </div>
         <div>
           <button id="subSkintoneBtn" onclick="location.href='schemeSkintoneBeta.html'">Skin Tone</button>
@@ -118,7 +118,7 @@
       mainSchemeUrl: '',
       mainSchemeGalleryPopup: '',
       mainSchemeEditor: '',
-      subSchemeReshape: '',
+      // subSchemeReshape: '',
       subSchemeEdit: '',
       subSchemeCrop: '',
       subSchemePatch: '',
@@ -138,10 +138,10 @@
         mainSchemeSetUrl();
       });
 
-      $("#subReshapeBtn").click(function () {
-        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape";
-        mainSchemeSetUrl();
-      });
+      // $("#subReshapeBtn").click(function () {
+      //   schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=reshape";
+      //   mainSchemeSetUrl();
+      // });
 
       $("#subEditBtn").click(function () {
         schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=edit";
