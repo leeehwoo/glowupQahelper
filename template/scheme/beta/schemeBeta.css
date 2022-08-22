@@ -90,7 +90,7 @@
   color: white;
 }
 
-#blemishBtn, #whitenBtn, #smoothBtn, #smootherBtn, #skinTextureBtn, #detailsBtn, #clarityBtn, #glowBtn, #concealBtn, #matteBtn, #vibranceBtn, #manageBtn {
+#blemishBtn, #whitenBtn, #smoothBtn, #smootherBtn, #skinTextureBtn, #detailsBtn, #clarityBtn, #glowBtn, #concealBtn, #matteBtn, #vibranceBtn, #manageBtn, #structureBtn, #blackandwhiteBtn, #antiglareBtn, #cooldownBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -99,7 +99,7 @@
   cursor: pointer;
 }
 
-#blemishBtn:hover, #whitenBtn:hover, #smoothBtn:hover, #smootherBtn:hover, #skinTextureBtn:hover, #detailsBtn:hover, #clarityBtn:hover, #glowBtn:hover, #concealBtn:hover, #matteBtn:hover, #vibranceBtn:hover, #manageBtn:hover {
+#blemishBtn:hover, #whitenBtn:hover, #smoothBtn:hover, #smootherBtn:hover, #skinTextureBtn:hover, #detailsBtn:hover, #clarityBtn:hover, #glowBtn:hover, #concealBtn:hover, #matteBtn:hover, #vibranceBtn:hover, #manageBtn:hover, #structureBtn:hover, #blackandwhiteBtn:hover, #antiglareBtn:hover, #cooldownBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
@@ -211,7 +211,7 @@
   color: white;
 }
 
-#makeupMainBtn, #lipColorBtn, #blushBtn, #contourBtn, #eyelashesBtn, #eyebrowsBtn, #eyeLinerBtn, #eyeShadowBtn {
+#makeupMainBtn, #lipColorBtn, #blushBtn, #contourBtn, #eyelashesBtn, #eyebrowsBtn, #eyeLinerBtn, #eyeShadowBtn, #looksBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -220,7 +220,7 @@
   cursor: pointer;
 }
 
-#makeupMainBtn:hover, #lipColorBtn:hover, #blushBtn:hover, #contourBtn:hover, #eyelashesBtn:hover, #eyebrowsBtn:hover, #eyeLinerBtn:hover, #eyeShadowBtn:hover {
+#makeupMainBtn:hover, #lipColorBtn:hover, #blushBtn:hover, #contourBtn:hover, #eyelashesBtn:hover, #eyebrowsBtn:hover, #eyeLinerBtn:hover, #eyeShadowBtn:hover, #looksBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }

@@ -72,6 +72,20 @@
         <div>
           <button id="manageBtn">Manage</button>
         </div>
+        <div>
+          <button id="structureBtn">Structure</button>
+        </div>
+        <div>
+          <button id="blackandwhiteBtn">B&W</button>
+        </div>
+      </div>
+      <div id="subOptionAreaThird">
+        <div>
+          <button id="antiglareBtn">Anti Glare</button>
+        </div>
+        <div>
+          <button id="cooldownBtn">Cool Down</button>
+        </div>
       </div>
     </div>
     <div id="titleArea">
@@ -114,6 +128,10 @@
       mainMatte: '',
       mainVibrance: '',
       mainManage: '',
+      mainStructure: '',
+      mainBlackandwhite: '',
+      mainAntiglare: '',
+      mainCooldown: '',
       mainAllUrl: '',
     }
 
@@ -184,6 +202,26 @@
           mainSchemeSetUrl();
       });
 
+      $("#structureBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=structure";
+        mainSchemeSetUrl();
+      });
+
+      $("#blackandwhiteBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=blackandwhite";
+        mainSchemeSetUrl();
+      });
+
+      $("#antiglareBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=antiglare";
+        mainSchemeSetUrl();
+      });
+
+      $("#cooldownBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=cooldown";
+        mainSchemeSetUrl();
+      });
+
       $("#mainUrl").click(function () {
         var schemeUrl = $(this).val();
         window.open(schemeUrl);
@@ -205,6 +243,10 @@
         schemeAppMain.mainMatte,
         schemeAppMain.mainVibrance,
         schemeAppMain.mainManage,
+        schemeAppMain.mainStructure,
+        schemeAppMain.mainBlackandwhite,
+        schemeAppMain.mainAntiglare,
+        schemeAppMain.mainCooldown
        ]
       console.log(mainParam);
       var all = schemeAppMain.mainSchemeUrl;
