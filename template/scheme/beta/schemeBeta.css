@@ -90,7 +90,7 @@
   color: white;
 }
 
-#blemishBtn, #whitenBtn, #smoothBtn, #smootherBtn, #skinTextureBtn, #detailsBtn, #clarityBtn, #glowBtn, #concealBtn, #matteBtn, #vibranceBtn, #manageBtn, #structureBtn, #blackandwhiteBtn, #antiglareBtn, #cooldownBtn {
+#blemishBtn, #whitenBtn, #smoothBtn, #smootherBtn, #skinTextureBtn, #detailsBtn, #clarityBtn, #glowBtn, #concealBtn, #matteBtn, #vibranceBtn, #manageBtn, #structureBtn, #blackandwhiteBtn, #antiglareBtn, #cooldownBtn, #autoBtn, #cleanseBtn, #fixshadowBtn, #fixtoneBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -99,7 +99,7 @@
   cursor: pointer;
 }
 
-#blemishBtn:hover, #whitenBtn:hover, #smoothBtn:hover, #smootherBtn:hover, #skinTextureBtn:hover, #detailsBtn:hover, #clarityBtn:hover, #glowBtn:hover, #concealBtn:hover, #matteBtn:hover, #vibranceBtn:hover, #manageBtn:hover, #structureBtn:hover, #blackandwhiteBtn:hover, #antiglareBtn:hover, #cooldownBtn:hover {
+#blemishBtn:hover, #whitenBtn:hover, #smoothBtn:hover, #smootherBtn:hover, #skinTextureBtn:hover, #detailsBtn:hover, #clarityBtn:hover, #glowBtn:hover, #concealBtn:hover, #matteBtn:hover, #vibranceBtn:hover, #manageBtn:hover, #structureBtn:hover, #blackandwhiteBtn:hover, #antiglareBtn:hover, #cooldownBtn:hover, #autoBtn:hover, #cleanseBtn:hover, #fixshadowBtn:hover, #fixtoneBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }

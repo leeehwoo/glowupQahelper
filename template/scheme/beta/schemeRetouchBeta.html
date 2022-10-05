@@ -86,6 +86,18 @@
         <div>
           <button id="cooldownBtn">Cool Down</button>
         </div>
+        <div>
+          <button id="autoBtn">Auto</button>
+        </div>
+        <div>
+          <button id="cleanseBtn">Cleanse</button>
+        </div>
+        <div>
+          <button id="fixshadowBtn">Fix Shadow</button>
+        </div>
+        <div>
+          <button id="fixtoneBtn">Fix Tone</button>
+        </div>
       </div>
     </div>
     <div id="titleArea">
@@ -132,6 +144,10 @@
       mainBlackandwhite: '',
       mainAntiglare: '',
       mainCooldown: '',
+      mainAuto:'',
+      mainCleanse: '',
+      mainFixshadow: '',
+      mainFixtone: '',
       mainAllUrl: '',
     }
 
@@ -222,6 +238,26 @@
         mainSchemeSetUrl();
       });
 
+      $("#autoBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=auto";
+        mainSchemeSetUrl();
+      });
+
+      $("#cleanseBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=cleanse";
+        mainSchemeSetUrl();
+      });
+
+      $("#fixshadowBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=fixshadow";
+        mainSchemeSetUrl();
+      });
+
+      $("#fixtoneBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=retouch&subTab=fixtone";
+        mainSchemeSetUrl();
+      });
+
       $("#mainUrl").click(function () {
         var schemeUrl = $(this).val();
         window.open(schemeUrl);
@@ -246,7 +282,11 @@
         schemeAppMain.mainStructure,
         schemeAppMain.mainBlackandwhite,
         schemeAppMain.mainAntiglare,
-        schemeAppMain.mainCooldown
+        schemeAppMain.mainCooldown,
+        schemeAppMain.mainAuto,
+        schemeAppMain.mainCleanse,
+        schemeAppMain.mainFixshadow,
+        schemeAppMain.mainFixtone
        ]
       console.log(mainParam);
       var all = schemeAppMain.mainSchemeUrl;
