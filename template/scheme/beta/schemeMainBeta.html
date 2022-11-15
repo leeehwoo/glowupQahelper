@@ -41,6 +41,9 @@
           <button id="subRetouchBtn" onclick="location.href='schemeRetouchBeta.html'">Retouch</button>
         </div>
         <div>
+          <button id="subaiSkinBtn">AI Skincare</button>
+        </div>
+        <div>
           <button id="subReshapeBtn" onclick="location.href='schemeReshapeBeta.html'">Reshape</button>
         </div>
         <div>
@@ -50,19 +53,22 @@
           <button id="subMakeupBtn" onclick="location.href='schemeMakeupBeta.html'">Makeup</button>
         </div>
         <div>
+          <button id="subEnhanceBtn">Enhance</button>
+        </div>
+        <div>
           <button id="subEditBtn" onclick="location.href='schemeEditBeta.html'">Edit</button>
         </div>
         <div>
           <button id="subCropBtn">Crop</button>
         </div>
+      </div>
+      <div id="subOptionAreaSecond">
         <div>
           <button id="subPatchBtn">Patch</button>
         </div>
         <div>
           <button id="subVanishBtn">Vanish</button>
         </div>
-      </div>
-      <div id="subOptionAreaSecond">
         <div>
           <button id="subPaintBtn" onclick="location.href='schemePaintBeta.html'">Paint</button>
         </div>
@@ -81,6 +87,8 @@
         <div>
           <button id="subBodyBtn" onclick="location.href='schemeBodyBeta.html'">Body</button>
         </div>
+      </div>
+      <div id="subOptionAreaThird">
         <div>
           <button id="subRelightBtn" onclick="location.href='schemeRelightBeta.html'">Relight</button>
         </div>
@@ -123,6 +131,8 @@
       subSchemeCrop: '',
       subSchemePatch: '',
       subSchemeVanish: '',
+      subSchemeAiSkincare: '',
+      subSchemeEnhance: '',
       mainAllUrl: '',
     }
 
@@ -160,6 +170,16 @@
 
       $("#subVanishBtn").click(function () {
         schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=vanish";
+        mainSchemeSetUrl();
+      });
+
+      $("#subaiSkinBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=aiskin";
+        mainSchemeSetUrl();
+      });
+
+      $("#subEnhanceBtn").click(function () {
+        schemeAppMain.mainSchemeUrl ="glowupb://editor?mainTab=enhance";
         mainSchemeSetUrl();
       });
 

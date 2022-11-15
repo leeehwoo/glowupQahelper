@@ -60,7 +60,7 @@
 }
 
 #subRetouchBtn, #subReshapeBtn, #subMakeupBtn,#subEditBtn, #subCropBtn, #subPatchBtn, #subPaintBtn
-, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn, #subSkintoneBtn, #subVanishBtn {
+, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn, #subSkintoneBtn, #subVanishBtn, #subaiSkinBtn, #subEnhanceBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -71,7 +71,7 @@
 }
 
 #subRetouchBtn:hover, #subReshapeBtn:hover, #subMakeupBtn:hover, #subEditBtn:hover, #subCropBtn:hover, #subPatchBtn:hover, #subPaintBtn:hover
-,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover, #subSkintoneBtn:hover, #subVanishBtn:hover {
+,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover, #subSkintoneBtn:hover, #subVanishBtn:hover, #subaiSkinBtn:hover, #subEnhanceBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
