@@ -359,7 +359,7 @@
   color: rgb(236, 157, 157);
 }
 
-#faceDetail, #eyesDetail, #eyebrowsDetail, #noseDetail, #mouthDetail {
+#faceDetail, #eyesDetail, #eyebrowsDetail, #noseDetail, #mouthDetail, #presetDetail {
   cursor: pointer;
   margin-left: 15px;
   margin-top: 20px;
@@ -392,6 +392,20 @@
 }
 
 #editMainBtn:hover, #editBrightnessBtn:hover, #editContrastBtn:hover, #editVibranceBtn:hover, #editSharpenBtn:hover, #editGrainBtn:hover, #editShadowsBtn:hover, #editHighlightsBtn:hover, #editSaturationBtn:hover, #editTempBtn:hover, #editVignetteBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#presetBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#presetBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }

@@ -34,6 +34,14 @@
         <h3>Sub Scheme</h3>
       </div>
       <details>
+        <summary id="presetDetail">Preset</summary>
+        <div id="subOptionArea">
+          <div>
+            <button id="presetBtn">Preset</button>
+          </div>
+        </div>
+      </details>
+      <details>
         <summary id="faceDetail">Face</summary>
         <div id="subOptionAreaFirst">
           <div>
@@ -268,6 +276,7 @@
       mouthLowerlip: '',
       mouthMlip: '',
       mouthSmile: '',
+      preset: '',
     }
 
     $(function () {
@@ -410,7 +419,14 @@
       $("#eyebrowsEyebrowliftBtn").click(function () {
         schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=eyebrows&itemId=eyebrowlift";
         mainSchemeSetUrl();
-      });$("#addQrcode").click(function () {
+      });
+
+      $("#presetBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=preset";
+        mainSchemeSetUrl();
+      });
+
+      $("#addQrcode").click(function () {
         $("#showQrCode #showQrCodeDiv").empty();
         jQuery("#showQrCode #showQrCodeDiv").qrcode({
           render: "table",
@@ -626,6 +642,7 @@
         schemeAppMain.mouthLowerlip,
         schemeAppMain.mouthMlip,
         schemeAppMain.mouthSmile,
+        schemeAppMain.preset,
       ]
       console.log(mainParam);
       var all = schemeAppMain.mainSchemeUrl;
