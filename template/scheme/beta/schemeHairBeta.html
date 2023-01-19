@@ -43,6 +43,9 @@
         <div>
           <button id="hairTextureBtn">Texture</button>
         </div>
+        <div>
+          <button id="hairGlowBtn">Glow</button>
+        </div>
       </div>
       <div id="recolorIdArea">
         <div id="recolorIdTitleArea">
@@ -86,6 +89,7 @@
       subFix: '',
       subRecolor: '',
       subTexture: '',
+      subGlow: '',
       recolorContentsId: '',
       mainAllUrl: '',
     }
@@ -119,6 +123,13 @@
         $("#recolorContentsId").attr("disabled",true).attr("readonly",false);
       });
 
+      $("#hairGlowBtn").click(function () {
+        $("#recolorContentsIdUnset").click();
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=hair&subTab=glow";
+        mainSchemeSetUrl();
+        $("#recolorContentsId").attr("disabled",true).attr("readonly",false);
+      });
+
       $("#recolorContentsIdSet").click(function () {
         var recolorId = $("#recolorContentsId").val();
         if (recolorId === '') {
@@ -147,6 +158,7 @@
         schemeAppMain.subFix,
         schemeAppMain.subRecolor,
         schemeAppMain.subTexture,
+        schemeAppMain.subGlow,
         schemeAppMain.recolorContentsId
       ]
       var all = schemeAppMain.mainSchemeUrl;

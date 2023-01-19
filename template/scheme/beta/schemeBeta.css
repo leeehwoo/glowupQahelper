@@ -309,7 +309,7 @@
   color: white;
 }
 
-#hairMainBtn, #hairFixBtn, #hairRecolorBtn, #hairTextureBtn {
+#hairMainBtn, #hairFixBtn, #hairRecolorBtn, #hairTextureBtn, #hairGlowBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -318,7 +318,7 @@
   cursor: pointer;
 }
 
-#hairMainBtn:hover, #hairFixBtn:hover, #hairRecolorBtn:hover, #hairTextureBtn:hover {
+#hairMainBtn:hover, #hairFixBtn:hover, #hairRecolorBtn:hover, #hairTextureBtn:hover, #hairGlowBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
