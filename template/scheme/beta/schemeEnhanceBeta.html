@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta http-equiv="Pragma" content="no-cache">
   <meta charset="UTF-8">
-  <title>Etc Scheme</title>
+  <title>Enhance Scheme</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="../jquery.qrcode.js"></script>
   <script type="text/javascript" src="../qrcode.js"></script>
@@ -14,36 +14,38 @@
 </head>
 <body>
   <div id="mainTitleArea">
-    Etc Scheme (Beta)
+    Enhance Scheme (Beta)
     <i class="fas fa-arrow-left" id="moveSchemeHome" onclick="location.href='schemeMainBeta.html'"></i>
     <i class="fas fa-home" id="moveHome" onclick="location.href='../../mainpage.html'"></i>
   </div>
-  <div id="subArea">
+  <div id="schemeSelectArea">
+    <div id="mainArea">
+      <div id="titleArea">
+        <h3>Main Scheme</h3>
+      </div>
+      <div id="mainOptionArea">
+        <div>
+          <button id="enhanceMainBtn">Enhance</button>
+        </div>
+      </div>
+    </div>
+    <div id="subArea">
+      <div id="titleArea">
+        <h3>Sub Scheme</h3>
+      </div>
+      <div id="subOptionArea">
+        <div>
+          <button id="v1Btn">v1</button>
+        </div>
+        <div>
+          <button id="v2Btn">v2</button>
+        </div>
+        <div>
+          <button id="v3Btn">v3</button>
+        </div>
+      </div>
+    </div>
     <div id="titleArea">
-      <h3>Scheme</h3>
-    </div>
-    <div id="subOptionArea">
-      <div>
-        <button id="termsBtn">Terms Of Use</button>
-      </div>
-      <div>
-        <button id="privacyBtn">Privacy Policy</button>
-      </div>
-      <div>
-        <button id="inAppBrowserBtn">In App Browser</button>
-      </div>
-      <div>
-        <button id="proBtn">Pro</button>
-      </div>
-    </div>
-    <div id="InsertArea">
-      <div id="urlInsertArea">
-        URL : <input type="text" id="inAppUrl" disabled>
-        <i class="fas fa-plus setStyle" id="urlSet"></i>
-      </div>
-    </div>
-  </div>
-  <div id="titleArea">
       <h2>* Scheme</h2>
     </div>
     <input id="mainUrl" readonly style="width: 600px;">
@@ -70,54 +72,42 @@
   <script>
     const schemeAppMain = {
       mainSchemeUrl: '',
-      terms: '',
-      privacy: '',
-      inAppBrowser: '',
-      inAppBrowserUrl: '',
-      pro: '',
-      mainAllUrl: '',
+      mainEnhance: '',
+      subV1: '',
+      subV2: '',
+      subV3: '',
+      mainAllUrl: ''
     }
 
-    $("#termsBtn").click(function () {
-      schemeAppMain.mainSchemeUrl = "glowupb://termsOfUse";
-      mainSchemeSetUrl();
-      $("#inAppUrl").attr("disabled",true).attr("readonly",false);
-    });
+    $(function () {
 
-    $("#privacyBtn").click(function () {
-      schemeAppMain.mainSchemeUrl = "glowupb://privacyPolicy";
-      mainSchemeSetUrl();
-      $("#inAppUrl").attr("disabled",true).attr("readonly",false);
-    });
+      $("#enhanceMainBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=enhance";
+        mainSchemeSetUrl();
+      });
 
-    $("#inAppBrowserBtn").click(function () {
-      $("#inAppUrl").attr("disabled",false).attr("readonly",false);
-      schemeAppMain.mainSchemeUrl = "Please enter the URL. ↑↑↑";
-      mainSchemeSetUrl();
-    });
+      $("#v1Btn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=enhance&version=1";
+        mainSchemeSetUrl();
+      });
 
-    $("#urlSet").click(function () {
-      var url = $("#inAppUrl").val();
-      if (url === '') {
-        return false;
-      }
-      schemeAppMain.mainSchemeUrl = "glowupb://inappBrowser?url=" + url;
-      mainSchemeSetUrl();
-    });
+      $("#v2Btn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=enhance&version=2";
+        mainSchemeSetUrl();
+      });
 
-    $("#proBtn").click(function () {
-      schemeAppMain.mainSchemeUrl = "glowupb://subscribe";
-      mainSchemeSetUrl();
-      $("#inAppUrl").attr("disabled",true).attr("readonly",false);
-    });
+      $("#v3Btn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=enhance&version=3";
+        mainSchemeSetUrl();
+      });
+    })
 
     function mainSchemeSetUrl() {
       const mainParam = [
-        schemeAppMain.terms,
-        schemeAppMain.privacy,
-        schemeAppMain.inAppBrowser,
-        schemeAppMain.inAppBrowserUrl,
-        schemeAppMain.pro
+        schemeAppMain.mainEnhance,
+        schemeAppMain.subV1,
+        schemeAppMain.subV2,
+        schemeAppMain.subV3
       ]
       var all = schemeAppMain.mainSchemeUrl;
       $("#mainUrl").val(all);

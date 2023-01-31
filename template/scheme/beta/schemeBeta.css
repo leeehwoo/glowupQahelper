@@ -410,7 +410,7 @@
   color: white;
 }
 
-#termsBtn, #privacyBtn, #inAppBrowserBtn {
+#termsBtn, #privacyBtn, #inAppBrowserBtn, #proBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -419,7 +419,7 @@
   cursor: pointer;
 }
 
-#termsBtn:hover, #privacyBtn:hover, #inAppBrowserBtn:hover {
+#termsBtn:hover, #privacyBtn:hover, #inAppBrowserBtn:hover, #proBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
@@ -428,4 +428,17 @@
   width: 400px;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+#enhanceMainBtn, #v1Btn, #v2Btn, #v3Btn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+#enhanceMainBtn:hover, #v1Btn:hover, #v2Btn:hover, #v3Btn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
 }
