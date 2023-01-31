@@ -434,8 +434,8 @@
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   cursor: pointer;
 }
 #enhanceMainBtn:hover, #v1Btn:hover, #v2Btn:hover, #v3Btn:hover {
