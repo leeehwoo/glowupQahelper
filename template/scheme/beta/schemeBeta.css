@@ -36,7 +36,7 @@
   /*background-color: rgb(213,131,236);*/
 }
 
-#galleryPopupBtn, #editorBtn {
+#galleryPopupBtn, #editorBtn, #etcBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-#galleryPopupBtn:hover, #editorBtn:hover {
+#galleryPopupBtn:hover, #editorBtn:hover, #etcBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
@@ -323,21 +323,21 @@
   color: white;
 }
 
-#lensInsertIdTitleArea, #recolorIdTitleArea {
+#lensInsertIdTitleArea, #recolorIdTitleArea, #urlInsertTitleArea {
   margin-left: 20px;
   margin-top: 20px;
   font-weight: bold;
   font-size: larger;
 }
 
-#lensIdInsertArea, #recolorIdInsertArea {
+#lensIdInsertArea, #recolorIdInsertArea, #urlInsertArea {
   margin-left: 27px;
   margin-top: 20px;
   font-weight: bold;
   font-size: large;
 }
 
-#makeupIdSet, #categoryIdSet, #filterIdSet, #lensContentsIdSet, #recolorContentsIdSet, #relightContentsIdSet {
+#makeupIdSet, #categoryIdSet, #filterIdSet, #lensContentsIdSet, #recolorContentsIdSet, #relightContentsIdSet, #urlSet {
   color: green;
   font-size: 25px;
   margin-left: 10px;
@@ -408,4 +408,24 @@
 #presetBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
+}
+
+#termsBtn, #privacyBtn, #inAppBrowserBtn {
+  margin: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#termsBtn:hover, #privacyBtn:hover, #inAppBrowserBtn:hover {
+  background-color: rgb(194, 192, 192);
+  color: white;
+}
+
+#inAppUrl {
+  width: 400px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
