@@ -281,7 +281,7 @@
   color: white;
 }
 
-#mouthMouthBtn, #mouthPhiltrumBtn, #mouthLipwidthBtn, #mouthUpperlipBtn, #mouthLowerlipBtn, #mouthMlipBtn, #mouthSmileBtn {
+#mouthMouthBtn, #mouthPhiltrumBtn, #mouthLipwidthBtn, #mouthUpperlipBtn, #mouthLowerlipBtn, #mouthMlipBtn, #mouthSmileBtn, #mouthlipVolumeBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -290,7 +290,7 @@
   cursor: pointer;
 }
 
-#mouthMouthBtn:hover, #mouthPhiltrumBtn:hover, #mouthLipwidthBtn:hover, #mouthUpperlipBtn:hover, #mouthLowerlipBtn:hover, #mouthMlipBtn:hover, #mouthSmileBtn:hover {
+#mouthMouthBtn:hover, #mouthPhiltrumBtn:hover, #mouthLipwidthBtn:hover, #mouthUpperlipBtn:hover, #mouthLowerlipBtn:hover, #mouthMlipBtn:hover, #mouthSmileBtn:hover, #mouthlipVolumeBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }

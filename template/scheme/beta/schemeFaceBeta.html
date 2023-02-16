@@ -175,9 +175,12 @@
       </details>
       <details>
         <summary id="mouthDetail">Mouth</summary>
-        <div id="subOptionArea">
+        <div id="subOptionAreaFirst">
           <div>
             <button id="mouthMouthBtn">Mouth</button>
+          </div>
+          <div>
+            <button id="mouthlipVolumeBtn">Lip Plumper</button>
           </div>
           <div>
             <button id="mouthPhiltrumBtn">Philtrum</button>
@@ -191,6 +194,8 @@
           <div>
             <button id="mouthLowerlipBtn">Lowerlip</button>
           </div>
+        </div>
+        <div id="subOptionAreaSecond">
           <div>
             <button id="mouthMlipBtn">Mlip</button>
           </div>
@@ -270,6 +275,7 @@
       noseTip: '',
       detailMouth: '',
       mouthMouth: '',
+      mouthLipplumper: '',
       mouthPhiltrum: '',
       mouthLipwidth: '',
       mouthUpperlip: '',
@@ -552,6 +558,11 @@
 
       $("#mouthMouthBtn").click(function () {
         schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=lips&itemId=mouth";
+        mainSchemeSetUrl();
+      });
+
+      $("#mouthlipVolumeBtn").click(function () {
+        schemeAppMain.mainSchemeUrl = "glowupb://editor?mainTab=face&category=lips&itemId=lipvolume";
         mainSchemeSetUrl();
       });
 
