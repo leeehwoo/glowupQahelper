@@ -60,7 +60,7 @@
 }
 
 #subRetouchBtn, #subReshapeBtn, #subMakeupBtn,#subEditBtn, #subCropBtn, #subPatchBtn, #subPaintBtn
-, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn, #subSkintoneBtn, #subVanishBtn, #subaiSkinBtn, #subEnhanceBtn {
+, #subFaceBtn, #subEyesBtn, #subTouchUpBtn, #subFilterBtn, #subBodyBtn, #subRelightBtn, #subHairBtn, #subSkintoneBtn, #subVanishBtn, #subaiSkinBtn, #subEnhanceBtn, #subLooksBtn {
   margin: 10px;
   border-radius: 10px;
   border-style: solid;
@@ -71,7 +71,7 @@
 }
 
 #subRetouchBtn:hover, #subReshapeBtn:hover, #subMakeupBtn:hover, #subEditBtn:hover, #subCropBtn:hover, #subPatchBtn:hover, #subPaintBtn:hover
-,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover, #subSkintoneBtn:hover, #subVanishBtn:hover, #subaiSkinBtn:hover, #subEnhanceBtn:hover {
+,#subFaceBtn:hover, #subEyesBtn:hover, #subTouchUpBtn:hover, #subFilterBtn:hover, #subBodyBtn:hover, #subRelightBtn:hover, #subHairBtn:hover, #subSkintoneBtn:hover, #subVanishBtn:hover, #subaiSkinBtn:hover, #subEnhanceBtn:hover, #subLooksBtn:hover {
   background-color: rgb(194, 192, 192);
   color: white;
 }
@@ -337,25 +337,25 @@
   font-size: large;
 }
 
-#makeupIdSet, #categoryIdSet, #filterIdSet, #lensContentsIdSet, #recolorContentsIdSet, #relightContentsIdSet, #urlSet {
+#makeupIdSet, #categoryIdSet, #filterIdSet, #lensContentsIdSet, #recolorContentsIdSet, #relightContentsIdSet, #urlSet, #looksCategoryIdSet, #looksContentsIdSet {
   color: green;
   font-size: 25px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-#makeupIdSet:hover, #categoryIdSet:hover, #filterIdSet:hover, #lensContentsIdSet:hover, #recolorContentsIdSet:hover, #relightContentsIdSet:hover {
+#makeupIdSet:hover, #categoryIdSet:hover, #filterIdSet:hover, #lensContentsIdSet:hover, #recolorContentsIdSet:hover, #relightContentsIdSet:hover, #looksCategoryIdSet:hover, #looksContentsIdSet:hover {
   color: rgb(140, 179, 149);
 }
 
-#makeupIdUnset, #categoryIdUnset, #filterIdUnset, #lensContentsIdUnset, #recolorContentsIdUnset, #relightContentsIdUnset {
+#makeupIdUnset, #categoryIdUnset, #filterIdUnset, #lensContentsIdUnset, #recolorContentsIdUnset, #relightContentsIdUnset, #looksCategoryIdUnset, #looksContentsIdUnset {
   color: red;
   font-size: 25px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-#makeupIdUnset:hover, #categoryIdUnset:hover, #filterIdUnsets:hover, #lensContentsIdUnset:hover, #recolorContentsIdUnset:hover, #relightContentsIdUnset:hover {
+#makeupIdUnset:hover, #categoryIdUnset:hover, #filterIdUnsets:hover, #lensContentsIdUnset:hover, #recolorContentsIdUnset:hover, #relightContentsIdUnset:hover, #looksCategoryIdUnset:hover, #looksContentsIdUnset:hover {
   color: rgb(236, 157, 157);
 }
 
